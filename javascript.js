@@ -70,3 +70,18 @@ function add() {
     operandFill = 1
     allowOperator = true
 }
+function subtract() {
+    if (calculation.operandOne > calculation.operandTwo) {
+        result = +calculation.operandOne - +calculation.operandTwo
+    }
+    if (calculation.operandOne < calculation.operandTwo) {
+        result = +calculation.operandTwo - +calculation.operandOne
+    }
+    calculation = {
+        operandOne:[],
+        operator:"",
+        operandTwo:[]
+    }
+    operandFill = 1
+    allowOperator = true
+}
