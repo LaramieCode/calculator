@@ -18,6 +18,7 @@ let calculation = {
     }
 let operandFill = 1
 let allowOperator = true
+let result;
 
 function createCalculation(value) {
 
@@ -58,4 +59,14 @@ function operate() {
     if (calculation.operator === "/") {
         divide()
     }
+}
+function add() {
+    result = +calculation.operandOne + +calculation.operandTwo
+    calculation = {
+        operandOne:[],
+        operator:"",
+        operandTwo:[]
+    }
+    operandFill = 1
+    allowOperator = true
 }
