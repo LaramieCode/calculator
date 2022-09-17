@@ -30,7 +30,7 @@ function createCalculation(value) {
             allowOperator = false
         }
         if (calculation.operandTwo.length > 0) {
-            console.log("run that shit")
+            operate()
         }
     }
     if (operandFill === 1 && numbers.includes(value)) {
@@ -40,11 +40,11 @@ function createCalculation(value) {
         calculation.operandTwo.push(value)
     }
     if (value === "=") {
-        console.log("run that shit2")
+        operate()
     }
     return(calculation)
 }
-
+// operate function will call another function based on the operator
 function operate() {
     if (calculation.operator === "+") {
         add()
