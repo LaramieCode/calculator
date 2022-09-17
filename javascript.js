@@ -9,3 +9,39 @@ buttons.forEach((button) => {
             ,100);       
     })
 })
+
+// create calculation function
+let calculation = {
+        operandOne:[],
+        operator:"",
+        operandTwo:[]
+    }
+let operandFill = 1
+let allowOperator = true
+
+function createCalculation(value) {
+
+    const operators = ["+", "-", "*", "/"]
+    const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",]
+    if (operators.includes(value)) {
+        if (allowOperator === true) {
+            calculation.operator = value;
+            operandFill = 2
+            allowOperator = false
+        }
+        if (calculation.operandTwo.length > 0) {
+            console.log("run that shit")
+        }
+    }
+    if (operandFill === 1 && numbers.includes(value)) {
+        calculation.operandOne.push(value)
+    }
+    if (operandFill === 2 && numbers.includes(value)) {
+        calculation.operandTwo.push(value)
+    }
+    if (value === "=") {
+        console.log("run that shit2")
+    }
+    return(calculation)
+    
+}
