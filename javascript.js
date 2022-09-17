@@ -85,3 +85,13 @@ function subtract() {
     operandFill = 1
     allowOperator = true
 }
+function multiply() {
+    result = +calculation.operandOne * +calculation.operandTwo
+    calculation = {
+        operandOne:[],
+        operator:"",
+        operandTwo:[]
+    }
+    operandFill = 1
+    allowOperator = true
+}
