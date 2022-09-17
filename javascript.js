@@ -43,5 +43,19 @@ function createCalculation(value) {
         console.log("run that shit2")
     }
     return(calculation)
-    
+}
+
+function operate() {
+    if (calculation.operator === "+") {
+        add()
+    }
+    if (calculation.operator === "-") {
+        subtract()
+    }
+    if (calculation.operator === "*") {
+        multiply()
+    }
+    if (calculation.operator === "/") {
+        divide()
+    }
 }
