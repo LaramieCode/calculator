@@ -95,3 +95,13 @@ function multiply() {
     operandFill = 1
     allowOperator = true
 }
+function divide() {
+    result = +calculation.operandOne / +calculation.operandTwo
+    calculation = {
+        operandOne:[],
+        operator:"",
+        operandTwo:[]
+    }
+    operandFill = 1
+    allowOperator = true
+}
