@@ -47,11 +47,13 @@ function createCalculation(value) {
     if (value === "=") {
         operate()
     }
-    calculationScreen.textContent = calculation.operandOne + calculation.operator + calculation.operandTwo
+    calculationScreen.textContent = calculation.operandOne.join("") + calculation.operator + calculation.operandTwo.join("")
     return(calculation)
 }
 // operate function will call another function based on the operator
 function operate() {
+    calculation.operandOne = calculation.operandOne.join("")
+    calculation.operandTwo = calculation.operandTwo.join("")
     if (calculation.operator === "+") {
         add()
     }
