@@ -24,6 +24,13 @@ let operandFill = 1
 let allowOperator = true
 let result;
 
+// console.log button 
+let consoleToggle = false
+function toggleConsole() {
+    if (consoleToggle === false) {consoleToggle = true}
+    else {consoleToggle = false}
+}
+
 function createCalculation(value) {
 
     const operators = ["+", "-", "*", "/"]
@@ -77,6 +84,7 @@ function add() {
     operandFill = 1
     allowOperator = true
     resultScreen.textContent = result
+    if (consoleToggle === true) {console.log(result)}
 }
 function subtract() {
     if (calculation.operandOne > calculation.operandTwo) {
@@ -93,6 +101,7 @@ function subtract() {
     operandFill = 1
     allowOperator = true
     resultScreen.textContent = result
+    if (consoleToggle === true) {console.log(result)}
 }
 function multiply() {
     result = +calculation.operandOne * +calculation.operandTwo
@@ -104,6 +113,7 @@ function multiply() {
     operandFill = 1
     allowOperator = true
     resultScreen.textContent = result
+    if (consoleToggle === true) {console.log(result)}
 }
 function divide() {
     result = +calculation.operandOne / +calculation.operandTwo
@@ -115,6 +125,7 @@ function divide() {
     operandFill = 1
     allowOperator = true
     resultScreen.textContent = result
+    if (consoleToggle === true) {console.log(result)}
 }
 
 // the 15 eventlisteners
@@ -136,3 +147,5 @@ buttons[16].addEventListener("click", () => createCalculation("8"))
 buttons[17].addEventListener("click", () => createCalculation("9"))
 // decimal eventlistener
 buttons[2].addEventListener("click", () => createCalculation("."))
+// console.log eventlistner
+buttons[1].addEventListener("click", () => toggleConsole())
