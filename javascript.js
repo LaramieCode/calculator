@@ -127,6 +127,14 @@ function divide() {
     resultScreen.textContent = result
     if (consoleToggle === true) {console.log(result)}
 }
+function clearCalculation() {
+    calculation = {
+        operandOne:[],
+        operator:"",
+        operandTwo:[]
+    }
+    calculationScreen.textContent = calculation.operandOne.join("") + calculation.operator + calculation.operandTwo.join("")
+}
 
 // the 15 eventlisteners
 buttons[3].addEventListener("click", () => createCalculation("+"))
@@ -149,3 +157,5 @@ buttons[17].addEventListener("click", () => createCalculation("9"))
 buttons[2].addEventListener("click", () => createCalculation("."))
 // console.log eventlistner
 buttons[1].addEventListener("click", () => toggleConsole())
+// clear eventlistener 
+buttons[18].addEventListener("click", () => clearCalculation())
