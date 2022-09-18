@@ -43,6 +43,9 @@ function createCalculation(value) {
         }
         if (calculation.operandTwo.length > 0) {
             operate()
+            calculation.operandOne = result.toString().split("")
+            calculation.operator = value
+            operandFill = 2
         }
     }
     if (operandFill === 1 && numbers.includes(value)) {
