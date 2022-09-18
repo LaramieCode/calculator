@@ -49,9 +49,17 @@ function createCalculation(value) {
         }
     }
     if (operandFill === 1 && numbers.includes(value)) {
+        if (value === "." && calculation.operandOne.includes(".")) {
+            if (consoleToggle === true) {console.log("You are already using a decimal")}
+            return
+        }
         calculation.operandOne.push(value)
     }
     if (operandFill === 2 && numbers.includes(value)) {
+        if (value === "." && calculation.operandTwo.includes(".")) {
+            if (consoleToggle === true) {console.log("You are already using a decimal")}
+            return
+        }
         calculation.operandTwo.push(value)
     }
     if (value === "=" && calculation.operandTwo.length <= 0) {
