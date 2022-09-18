@@ -56,6 +56,7 @@ function createCalculation(value) {
     }
     if (value === "=") {
         operate()
+        allowOperator = true
     }
     calculationScreen.textContent = calculation.operandOne.join("") + calculation.operator + calculation.operandTwo.join("")
     return(calculation)
@@ -110,7 +111,6 @@ function add() {
         operandTwo:[]
     }
     operandFill = 1
-    allowOperator = true
     resultScreen.textContent = result
     if (consoleToggle === true) {console.log(result)}
 }
@@ -127,7 +127,6 @@ function subtract() {
         operandTwo:[]
     }
     operandFill = 1
-    allowOperator = true
     resultScreen.textContent = result
     if (consoleToggle === true) {console.log(result)}
 }
@@ -139,7 +138,6 @@ function multiply() {
         operandTwo:[]
     }
     operandFill = 1
-    allowOperator = true
     resultScreen.textContent = result
     if (consoleToggle === true) {console.log(result)}
 }
@@ -151,7 +149,6 @@ function divide() {
         operandTwo:[]
     }
     operandFill = 1
-    allowOperator = true
     resultScreen.textContent = result
     if (consoleToggle === true) {console.log(result)}
 }
