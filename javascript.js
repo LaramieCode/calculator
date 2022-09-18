@@ -72,6 +72,7 @@ function back() {
         if (calculation.operandTwo.length === 0) {
             calculation.operator = ""
             operandFill = 1
+            allowOperator = true
             calculationScreen.textContent = calculation.operandOne.join("") + calculation.operator + calculation.operandTwo.join("")
         }
         if (calculation.operandTwo.length > 0) {
