@@ -31,10 +31,11 @@ function toggleConsole() {
     else {consoleToggle = false}
 }
 
+const operators = ["+", "-", "*", "/"]
+const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."]
+
 function createCalculation(value) {
 
-    const operators = ["+", "-", "*", "/"]
-    const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."]
     if (operators.includes(value)) {
         if (allowOperator === true) {
             calculation.operator = value;
@@ -209,3 +210,13 @@ buttons[1].addEventListener("click", () => toggleConsole())
 buttons[18].addEventListener("click", () => clearCalculation())
 // back eventlistener
 buttons[19].addEventListener("click", () => back())
+
+// keyboard support
+window.addEventListener("keydown", e => {
+    if (numbers.includes(e.key) || operators.includes(e.key) || e.key === "=") {createCalculation(e.key)}
+    if (e.key === "Enter") {createCalculation("=")}
+    if (e.key === "Backspace") {back()}
+    if (e.key === "Escape") {clearCalculation()}
+})
+
+window.addEventListener("keydown", e => {console.log(e.key)})
