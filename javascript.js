@@ -54,13 +54,13 @@ function createCalculation(value) {
     if (operandFill === 2 && numbers.includes(value)) {
         calculation.operandTwo.push(value)
     }
-    if (value === "=" && calculation.operandTwo <= 0) {
+    if (value === "=" && calculation.operandTwo.length <= 0) {
         if (consoleToggle === true) {
             console.log ("calculation was not filled out")
         }
         return("no")
     }
-    if (value === "=" && calculation.operandTwo > 0) {
+    if (value === "=" && calculation.operandTwo.length > 0) {
         operate()
         allowOperator = true
     } 
