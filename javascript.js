@@ -10,6 +10,8 @@ buttons.forEach((button) => {
     })
 })
 
+
+
 // create calculation function
 let calculation = {
         operandOne:[],
@@ -105,3 +107,21 @@ function divide() {
     operandFill = 1
     allowOperator = true
 }
+
+// the 15
+buttons[3].addEventListener("click", () => createCalculation("+"))
+buttons[4].addEventListener("click", () => createCalculation("-"))
+buttons[5].addEventListener("click", () => createCalculation("*"))
+buttons[6].addEventListener("click", () => createCalculation("/"))
+buttons[7].addEventListener("click", () => createCalculation("="))
+
+buttons[8].addEventListener("click", () => createCalculation("0"))
+buttons[9].addEventListener("click", () => createCalculation("1"))
+buttons[10].addEventListener("click", () => createCalculation("2"))
+buttons[11].addEventListener("click", () => createCalculation("3"))
+buttons[12].addEventListener("click", () => createCalculation("4"))
+buttons[13].addEventListener("click", () => createCalculation("5"))
+buttons[14].addEventListener("click", () => createCalculation("6"))
+buttons[15].addEventListener("click", () => createCalculation("7"))
+buttons[16].addEventListener("click", () => createCalculation("8"))
+buttons[17].addEventListener("click", () => createCalculation("9"))
