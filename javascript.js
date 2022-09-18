@@ -148,15 +148,21 @@ function multiply() {
     if (consoleToggle === true) {console.log(result)}
 }
 function divide() {
-    result = +calculation.operandOne / +calculation.operandTwo
-    calculation = {
-        operandOne:[],
-        operator:"",
-        operandTwo:[]
+    if (+calculation.operandOne === 0 || +calculation.operandTwo === 0) {
+        clearCalculation()
+        resultScreen.textContent = "illegal move"
+    } else {
+        result = +calculation.operandOne / +calculation.operandTwo
+        calculation = {
+            operandOne:[],
+            operator:"",
+            operandTwo:[]
+        }
+        operandFill = 1
+        resultScreen.textContent = result
+        if (consoleToggle === true) {console.log(result)}
     }
-    operandFill = 1
-    resultScreen.textContent = result
-    if (consoleToggle === true) {console.log(result)}
+    
 }
 function clearCalculation() {
     calculation = {
