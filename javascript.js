@@ -27,7 +27,7 @@ let result;
 function createCalculation(value) {
 
     const operators = ["+", "-", "*", "/"]
-    const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",]
+    const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."]
     if (operators.includes(value)) {
         if (allowOperator === true) {
             calculation.operator = value;
@@ -117,7 +117,7 @@ function divide() {
     resultScreen.textContent = result
 }
 
-// the 15
+// the 15 eventlisteners
 buttons[3].addEventListener("click", () => createCalculation("+"))
 buttons[4].addEventListener("click", () => createCalculation("-"))
 buttons[5].addEventListener("click", () => createCalculation("*"))
@@ -134,3 +134,5 @@ buttons[14].addEventListener("click", () => createCalculation("6"))
 buttons[15].addEventListener("click", () => createCalculation("7"))
 buttons[16].addEventListener("click", () => createCalculation("8"))
 buttons[17].addEventListener("click", () => createCalculation("9"))
+// decimal eventlistener
+buttons[2].addEventListener("click", () => createCalculation("."))
