@@ -161,7 +161,10 @@ function clearCalculation() {
         operator:"",
         operandTwo:[]
     }
+    result = 0
+    operandFill = 1
     calculationScreen.textContent = calculation.operandOne.join("") + calculation.operator + calculation.operandTwo.join("")
+    resultScreen.textContent = ""
 }
 
 // the 15 eventlisteners
