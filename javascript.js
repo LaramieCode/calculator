@@ -12,6 +12,7 @@ buttons.forEach((button) => {
 
 //screen variables
 const resultScreen = document.querySelector("#result")
+const calculationScreen = document.querySelector("#calculation")
 
 // create calculation function
 let calculation = {
@@ -46,6 +47,7 @@ function createCalculation(value) {
     if (value === "=") {
         operate()
     }
+    calculationScreen.textContent = calculation.operandOne + calculation.operator + calculation.operandTwo
     return(calculation)
 }
 // operate function will call another function based on the operator
