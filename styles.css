@@ -45,6 +45,10 @@ body {
 }
 .inScreen {
     width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: xx-large;
+    padding-left: 3%;
 }
 #calculation {
     height: 30%;

@@ -10,7 +10,8 @@ buttons.forEach((button) => {
     })
 })
 
-
+//screen variables
+const resultScreen = document.querySelector("#result")
 
 // create calculation function
 let calculation = {
@@ -71,6 +72,7 @@ function add() {
     }
     operandFill = 1
     allowOperator = true
+    resultScreen.textContent = result
 }
 function subtract() {
     if (calculation.operandOne > calculation.operandTwo) {
@@ -86,6 +88,7 @@ function subtract() {
     }
     operandFill = 1
     allowOperator = true
+    resultScreen.textContent = result
 }
 function multiply() {
     result = +calculation.operandOne * +calculation.operandTwo
@@ -96,6 +99,7 @@ function multiply() {
     }
     operandFill = 1
     allowOperator = true
+    resultScreen.textContent = result
 }
 function divide() {
     result = +calculation.operandOne / +calculation.operandTwo
@@ -106,6 +110,7 @@ function divide() {
     }
     operandFill = 1
     allowOperator = true
+    resultScreen.textContent = result
 }
 
 // the 15
