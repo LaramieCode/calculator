@@ -115,10 +115,10 @@ function add() {
     if (consoleToggle === true) {console.log(result)}
 }
 function subtract() {
-    if (calculation.operandOne > calculation.operandTwo) {
+    if (+calculation.operandOne > +calculation.operandTwo) {
         result = +calculation.operandOne - +calculation.operandTwo
     }
-    if (calculation.operandOne < calculation.operandTwo) {
+    if (+calculation.operandOne < +calculation.operandTwo) {
         result = +calculation.operandTwo - +calculation.operandOne
     }
     calculation = {
