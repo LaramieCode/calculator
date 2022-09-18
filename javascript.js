@@ -57,6 +57,30 @@ function createCalculation(value) {
     calculationScreen.textContent = calculation.operandOne.join("") + calculation.operator + calculation.operandTwo.join("")
     return(calculation)
 }
+
+function back() {
+    if (operandFill === 1) {
+        if (calculation.operandOne.length === 0) {
+            return
+        } 
+        if (calculation.operandOne.length > 0) {
+            calculation.operandOne.pop()
+            calculationScreen.textContent = calculation.operandOne.join("") + calculation.operator + calculation.operandTwo.join("")
+        }
+    }
+    if (operandFill === 2) {
+        if (calculation.operandTwo.length === 0) {
+            calculation.operator = ""
+            operandFill = 1
+            calculationScreen.textContent = calculation.operandOne.join("") + calculation.operator + calculation.operandTwo.join("")
+        }
+        if (calculation.operandTwo.length > 0) {
+            calculation.operandTwo.pop()
+            calculationScreen.textContent = calculation.operandOne.join("") + calculation.operator + calculation.operandTwo.join("")
+        }
+    }
+}
+
 // operate function will call another function based on the operator
 function operate() {
     calculation.operandOne = calculation.operandOne.join("")
@@ -159,3 +183,5 @@ buttons[2].addEventListener("click", () => createCalculation("."))
 buttons[1].addEventListener("click", () => toggleConsole())
 // clear eventlistener 
 buttons[18].addEventListener("click", () => clearCalculation())
+// back eventlistener
+buttons[19].addEventListener("click", () => back())
